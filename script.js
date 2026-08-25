@@ -37,8 +37,15 @@ let activeSlide = 0;
 let rotationTimer;
 let rotationPaused = reduceMotion.matches;
 
+function prepareSlide(index) {
+  if (!slides.length) return;
+  slides[(index + slides.length) % slides.length].loading = 'eager';
+}
+
 function showSlide(index) {
   activeSlide = (index + slides.length) % slides.length;
+  prepareSlide(activeSlide);
+  prepareSlide(activeSlide + 1);
 
   slides.forEach((slide, slideIndex) => {
     slide.classList.toggle('is-active', slideIndex === activeSlide);
