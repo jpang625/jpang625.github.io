@@ -1,69 +1,345 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junyuan Pang's Personal Homepage</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2731">
+  <meta name="description" content="Junyuan Pang is a Ph.D. student at Zhejiang University researching data valuation, Shapley-like value estimation, and trustworthy machine learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Junyuan Pang | Researcher in Data Valuation">
+  <meta property="og:description" content="Research in data valuation, Shapley-like estimation, and trustworthy machine learning.">
+  <meta property="og:url" content="https://jpang625.github.io/">
+  <meta property="og:image" content="https://jpang625.github.io/assets/images/hero-city.webp">
+  <meta property="og:image:alt" content="A city skyline beneath a dramatic sunset photographed by Junyuan Pang">
+  <link rel="canonical" href="https://jpang625.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/hero-city.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Junyuan Pang | Data Valuation Researcher</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Junyuan Pang</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Junyuan Pang, home">
+        <span class="brand-mark" aria-hidden="true">JP</span>
+        <span>Junyuan Pang</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+      <div class="nav-links" id="site-nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#beyond">Beyond research</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <header class="jumbotron text-center">
-        <h1 class="display-4">Junyuan Pang</h1>
-        <p class="lead">Incoming PhD Student | Researcher in Shapley Value Approximation Algorithms</p>
-    </header>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-slide is-active" src="assets/images/hero-city.webp" alt="" width="1920" height="1280" fetchpriority="high">
+        <img class="hero-slide" src="assets/images/hero-lake.webp" alt="" width="1920" height="1440">
+        <img class="hero-slide" src="assets/images/hero-harbor.webp" alt="" width="1920" height="1280">
+        <div class="hero-shade"></div>
+      </div>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I am Junyuan Pang, an incoming PhD student with a keen interest in Shapley value approximation algorithms, benchmarking, and various research topics in computer science.</p>
-        </section>
-        <hr>
-        <section id="research">
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Shapley value approximation algorithms</li>
-                <li>Benchmarking with OpenSV</li>
-                <li>Data value for storage classification</li>
-                <li>Content Distribution Network Caching</li>
-            </ul>
-        </section>
-        <hr>
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <!-- Add more publications as needed -->
-            </ul>
-        </section>
-        <hr>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:junyuanpang@zju.edu.cn">junyuanpang@zju.edu.cn</a></p>
-        </section>
+      <div class="hero-layout shell">
+        <article class="identity-card">
+          <img class="portrait" src="assets/images/portrait.webp" alt="Portrait of Junyuan Pang" width="900" height="1350">
+          <div class="identity-copy">
+            <p class="eyebrow">Ph.D. Student · Computer Science</p>
+            <h1 id="hero-title">Junyuan Pang</h1>
+            <p class="affiliation">Zhejiang University <span aria-hidden="true">·</span> Shenzhen Loop Area Institute</p>
+            <p class="hero-intro">Data valuation, Shapley-like estimation, and efficient sampling for trustworthy machine learning.</p>
+            <div class="hero-actions" aria-label="Profile links">
+              <a class="button button-primary" href="#publications">Explore research <span aria-hidden="true">↓</span></a>
+              <a class="button button-ghost" href="https://github.com/jpang625" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              <a class="button button-ghost" href="mailto:junyuanpang@zju.edu.cn">Email</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="hero-controls" aria-label="Background controls">
+          <span class="hero-caption" aria-live="polite">City sunset · 1 of 3</span>
+          <div class="hero-dots" role="group" aria-label="Choose a background">
+            <button class="hero-dot is-active" type="button" aria-label="Show city sunset background" aria-pressed="true"></button>
+            <button class="hero-dot" type="button" aria-label="Show lake sunset background" aria-pressed="false"></button>
+            <button class="hero-dot" type="button" aria-label="Show blue harbor background" aria-pressed="false"></button>
+          </div>
+          <button class="rotation-toggle" type="button" aria-label="Pause background rotation">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">Mathematical foundations, practical data systems.</h2>
+        </div>
+        <div class="about-copy">
+          <p class="lead">I am a Ph.D. student in Computer Science at Zhejiang University and part of a joint doctoral training program at the Shenzhen Loop Area Institute.</p>
+          <p>I received my B.S. in Mathematics and Applied Mathematics from Zhejiang University in 2024. My work combines rigorous mathematical analysis with practical algorithm design, focusing on how to value data fairly and estimate contribution efficiently at scale.</p>
+          <dl class="quick-facts">
+            <div>
+              <dt>Based in</dt>
+              <dd>Hangzhou &amp; Shenzhen, China</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Data valuation &amp; trustworthy ML</dd>
+            </div>
+            <div>
+              <dt>Toolkit</dt>
+              <dd>Python, C++, MATLAB, LaTeX</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research" id="research" aria-labelledby="research-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Research</p>
+            <h2 id="research-title">What I work on</h2>
+          </div>
+          <p>I study principled and scalable ways to understand the value, ownership, and contribution of data in machine learning systems.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-item">
+            <span class="research-number" aria-hidden="true">01</span>
+            <h3>Data valuation</h3>
+            <p>Fairly quantifying the contribution of data points, features, and participants to collective utility.</p>
+          </article>
+          <article class="research-item">
+            <span class="research-number" aria-hidden="true">02</span>
+            <h3>Shapley-like estimation</h3>
+            <p>Designing estimators that preserve theoretical guarantees while reducing expensive utility evaluations.</p>
+          </article>
+          <article class="research-item">
+            <span class="research-number" aria-hidden="true">03</span>
+            <h3>Adaptive sampling</h3>
+            <p>Allocating limited sampling budgets where they deliver the greatest reduction in estimation error.</p>
+          </article>
+          <article class="research-item">
+            <span class="research-number" aria-hidden="true">04</span>
+            <h3>Trustworthy data systems</h3>
+            <p>Protecting dataset ownership and utility through robust, machine-learning-aware watermarking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section publications" id="publications" aria-labelledby="publications-title">
+      <div class="shell">
+        <div class="section-heading publication-heading">
+          <div>
+            <p class="section-kicker">Selected publications</p>
+            <h2 id="publications-title">Recent work</h2>
+          </div>
+          <a class="text-link" href="https://orcid.org/0009-0004-2653-2811" target="_blank" rel="noreferrer">ORCID profile <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <ol class="publication-list">
+          <li class="publication-item">
+            <div class="publication-meta">
+              <span>SIGMOD</span>
+              <time datetime="2026">2026</time>
+            </div>
+            <div class="publication-body">
+              <div class="publication-title-row">
+                <h3>ASSS: Adaptive Stratified Sampling for Shapley-like Values</h3>
+                <span class="badge">First author</span>
+              </div>
+              <p class="authors"><strong>Junyuan Pang</strong>, Jiayao Zhang, Jiazheng Song, Jinfei Liu, and Kui Ren</p>
+              <p class="publication-summary">Adaptive stratification for accurate, unbiased Shapley-like value estimation under limited sampling budgets.</p>
+              <div class="publication-links">
+                <a href="https://doi.org/10.1145/3802016" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+                <a href="https://2026.sigmod.org/sigmod_papers.shtml" target="_blank" rel="noreferrer">SIGMOD listing <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <div class="publication-meta">
+              <span>SIGMOD</span>
+              <time datetime="2025">2025</time>
+            </div>
+            <div class="publication-body">
+              <div class="publication-title-row">
+                <h3>Shapley Value Estimation Based on Differential Matrix</h3>
+                <span class="badge">First author</span>
+              </div>
+              <p class="authors"><strong>Junyuan Pang</strong>, Jian Pei, Haocheng Xia, Xiang Li, and Jinfei Liu</p>
+              <p class="publication-summary">A differential-matrix approach that estimates pairwise value differences and recovers Shapley values with lower variance.</p>
+              <div class="publication-links">
+                <a href="https://doi.org/10.1145/3709725" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+                <a href="https://haochengxia.com/publication/sigmod25-SVDiff.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <div class="publication-meta">
+              <span>CCS</span>
+              <time datetime="2024">2024</time>
+            </div>
+            <div class="publication-body">
+              <div class="publication-title-row">
+                <h3>TabularMark: Watermarking Tabular Datasets for Machine Learning</h3>
+              </div>
+              <p class="authors">Yihao Zheng, Haocheng Xia, <strong>Junyuan Pang</strong>, Jinfei Liu, Kui Ren, Lingyang Chu, Yang Cao, and Li Xiong</p>
+              <p class="publication-summary">A hypothesis-testing-based watermark that protects ownership while preserving downstream machine-learning utility.</p>
+              <div class="publication-links">
+                <a href="https://doi.org/10.1145/3658644.3690373" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+                <a href="https://arxiv.org/abs/2406.14841" target="_blank" rel="noreferrer">arXiv <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/yihzheng258/TabularMark" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="publication-item">
+            <div class="publication-meta">
+              <span>PVLDB</span>
+              <time datetime="2024">2024</time>
+            </div>
+            <div class="publication-body">
+              <div class="publication-title-row">
+                <h3>P-Shapley: Shapley Values on Probabilistic Classifiers</h3>
+              </div>
+              <p class="authors">Haocheng Xia, Xiang Li, <strong>Junyuan Pang</strong>, Jinfei Liu, Kui Ren, and Li Xiong</p>
+              <p class="publication-summary">Probability-based utility functions for finer-grained and more stable data valuation in classification.</p>
+              <div class="publication-links">
+                <a href="https://doi.org/10.14778/3654621.3654638" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+                <a href="https://www.vldb.org/pvldb/vol17/p1737-liu.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/ZJU-DIVER/P-Shapley" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section education" id="education" aria-labelledby="education-title">
+      <div class="shell education-grid">
+        <div class="education-intro">
+          <p class="section-kicker">Education</p>
+          <h2 id="education-title">From mathematics to computer science.</h2>
+          <p>My mathematical training shapes how I approach algorithm design: start with the structure, make the assumptions explicit, and test the result against real systems.</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <div class="timeline-date">2024 — 2028 <span>expected</span></div>
+            <h3>Ph.D. in Computer Science</h3>
+            <p>Zhejiang University</p>
+          </li>
+          <li>
+            <div class="timeline-date">2025 — Present</div>
+            <h3>Joint Doctoral Training</h3>
+            <p>Shenzhen Loop Area Institute</p>
+          </li>
+          <li>
+            <div class="timeline-date">2020 — 2024</div>
+            <h3>B.S. in Mathematics and Applied Mathematics</h3>
+            <p>Zhejiang University · GPA 3.7/4.0 · Rank 6/20</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section beyond" id="beyond" aria-labelledby="beyond-title">
+      <div class="shell">
+        <div class="section-heading beyond-heading">
+          <div>
+            <p class="section-kicker">Beyond research</p>
+            <h2 id="beyond-title">Fragments from the road</h2>
+          </div>
+          <p>Travel keeps me curious about place, light, and perspective. These are a few frames I have collected along the way.</p>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo photo-wide">
+            <img src="assets/images/travel-skyline.webp" alt="Blue-hour skyline reflected across the water" width="1280" height="853" loading="lazy">
+          </figure>
+          <figure class="photo photo-tall">
+            <img src="assets/images/travel-koi.webp" alt="Koi swimming beneath shafts of underwater light" width="853" height="1280" loading="lazy">
+          </figure>
+          <figure class="photo">
+            <img src="assets/images/travel-sunset-close.webp" alt="Orange sunset breaking through clouds above a city" width="1280" height="853" loading="lazy">
+          </figure>
+          <figure class="photo photo-tall">
+            <img src="assets/images/travel-bridge.webp" alt="Suspension bridge towers receding into fog" width="853" height="1280" loading="lazy">
+          </figure>
+          <figure class="photo photo-wide">
+            <img src="assets/images/travel-reflection.webp" alt="Still water reflecting a distant landscape" width="1280" height="853" loading="lazy">
+          </figure>
+          <figure class="photo">
+            <img src="assets/images/travel-bird.webp" alt="Bird perched on a branch against a luminous sky" width="1280" height="853" loading="lazy">
+          </figure>
+          <figure class="photo">
+            <img src="assets/images/travel-autumn.webp" alt="Red autumn leaves against a clear blue sky" width="1100" height="825" loading="lazy">
+          </figure>
+          <figure class="photo photo-tall">
+            <img src="assets/images/travel-rainbow.webp" alt="A rainbow descending toward the sea" width="853" height="1280" loading="lazy">
+          </figure>
+          <figure class="photo photo-wide">
+            <img src="assets/images/travel-dusk.webp" alt="A figure overlooking mountains and water at dusk" width="1280" height="960" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Let’s exchange ideas.</h2>
+          <p>I am always glad to discuss research, collaborations, and opportunities around data valuation and trustworthy machine learning.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="mailto:junyuanpang@zju.edu.cn">junyuanpang@zju.edu.cn</a>
+          <a class="contact-secondary" href="https://github.com/jpang625" target="_blank" rel="noreferrer">github.com/jpang625 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <p>© <span id="current-year">2026</span> Junyuan Pang</p>
+      <p>Research, travel, and a long horizon.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
+  </footer>
 
-    <footer class="text-center bg-dark text-white py-4">
-        <p>&copy; 2024 Junyuan Pang</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Junyuan Pang",
+    "url": "https://jpang625.github.io/",
+    "email": "mailto:junyuanpang@zju.edu.cn",
+    "jobTitle": "Ph.D. Student in Computer Science",
+    "affiliation": [
+      {"@type": "CollegeOrUniversity", "name": "Zhejiang University"},
+      {"@type": "ResearchOrganization", "name": "Shenzhen Loop Area Institute"}
+    ],
+    "sameAs": [
+      "https://github.com/jpang625",
+      "https://orcid.org/0009-0004-2653-2811"
+    ],
+    "knowsAbout": ["Data valuation", "Shapley value estimation", "Trustworthy machine learning", "Adaptive sampling"]
+  }
+  </script>
 </body>
 </html>
