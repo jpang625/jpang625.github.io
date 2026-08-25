@@ -31,7 +31,7 @@ const dots = [...document.querySelectorAll('.hero-dot')];
 const caption = document.querySelector('.hero-caption');
 const rotationToggle = document.querySelector('.rotation-toggle');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const slideLabels = ['City sunset', 'Lake sunset', 'Blue harbor'];
+const slideLabels = slides.map((slide, index) => slide.dataset.label || `Background ${index + 1}`);
 const rotationDelay = 9000;
 let activeSlide = 0;
 let rotationTimer;

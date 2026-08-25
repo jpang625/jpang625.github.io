@@ -45,9 +45,11 @@
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-media" aria-hidden="true">
-        <img class="hero-slide is-active" src="assets/images/hero-city.webp" alt="" width="1920" height="1280" fetchpriority="high">
-        <img class="hero-slide" src="assets/images/hero-lake.webp" alt="" width="1920" height="1440">
-        <img class="hero-slide" src="assets/images/hero-harbor.webp" alt="" width="1920" height="1280">
+        <img class="hero-slide hero-city-wide is-active" src="assets/images/hero-city.webp" alt="" width="2880" height="1920" data-label="City sunset - wide" fetchpriority="high">
+        <img class="hero-slide hero-city-close" src="assets/images/hero-city-close.webp" alt="" width="2880" height="1920" data-label="City sunset - tight">
+        <img class="hero-slide hero-lake" src="assets/images/hero-lake.webp" alt="" width="2880" height="2160" data-label="Lake sunset">
+        <img class="hero-slide hero-harbor" src="assets/images/hero-harbor.webp" alt="" width="2880" height="1920" data-label="Blue harbor">
+        <img class="hero-slide hero-city-pastel" src="assets/images/hero-city-pastel.webp" alt="" width="2880" height="1920" data-label="Pastel city">
         <div class="hero-shade"></div>
       </div>
 
@@ -68,11 +70,13 @@
         </article>
 
         <div class="hero-controls" aria-label="Background controls">
-          <span class="hero-caption" aria-live="polite">City sunset · 1 of 3</span>
+          <span class="hero-caption" aria-live="polite">City sunset - wide - 1 of 5</span>
           <div class="hero-dots" role="group" aria-label="Choose a background">
             <button class="hero-dot is-active" type="button" aria-label="Show city sunset background" aria-pressed="true"></button>
+            <button class="hero-dot" type="button" aria-label="Show tighter city sunset background" aria-pressed="false"></button>
             <button class="hero-dot" type="button" aria-label="Show lake sunset background" aria-pressed="false"></button>
             <button class="hero-dot" type="button" aria-label="Show blue harbor background" aria-pressed="false"></button>
+            <button class="hero-dot" type="button" aria-label="Show pastel city background" aria-pressed="false"></button>
           </div>
           <button class="rotation-toggle" type="button" aria-label="Pause background rotation">Pause</button>
         </div>
@@ -239,7 +243,12 @@
         </div>
         <ol class="timeline">
           <li>
-            <div class="timeline-date">2024 — 2028 <span>expected</span></div>
+            <div class="timeline-date">2020 — 2024</div>
+            <h3>B.S. in Mathematics and Applied Mathematics</h3>
+            <p>Zhejiang University · GPA 3.7/4.0 · Rank 6/20</p>
+          </li>
+          <li>
+            <div class="timeline-date">2024 — Present</div>
             <h3>Ph.D. in Computer Science</h3>
             <p>Zhejiang University</p>
           </li>
@@ -247,11 +256,6 @@
             <div class="timeline-date">2025 — Present</div>
             <h3>Joint Doctoral Training</h3>
             <p>Shenzhen Loop Area Institute</p>
-          </li>
-          <li>
-            <div class="timeline-date">2020 — 2024</div>
-            <h3>B.S. in Mathematics and Applied Mathematics</h3>
-            <p>Zhejiang University · GPA 3.7/4.0 · Rank 6/20</p>
           </li>
         </ol>
       </div>
