@@ -10,6 +10,7 @@
   --line: rgba(16, 37, 43, 0.16);
   --shadow: 0 24px 70px rgba(3, 19, 25, 0.22);
   --shell: min(1180px, calc(100% - 48px));
+  --hero-max: 1440px;
 }
 
 *,
@@ -171,7 +172,9 @@ select {
 
 .hero {
   position: relative;
+  width: min(100%, var(--hero-max));
   min-height: 620px;
+  margin-inline: auto;
   color: var(--white);
   background: var(--navy);
   overflow: hidden;
@@ -190,15 +193,11 @@ select {
   object-fit: cover;
   opacity: 0;
   transform: scale(1.01);
-  transition: opacity 700ms ease;
+  transition: opacity 700ms ease, transform 9000ms linear;
 }
 
 .hero-city-wide {
   object-position: center 53%;
-}
-
-.hero-city-close {
-  object-position: center 55%;
 }
 
 .hero-lake {
@@ -215,6 +214,7 @@ select {
 
 .hero-slide.is-active {
   opacity: 1;
+  transform: scale(1.075);
 }
 
 .hero-shade {
