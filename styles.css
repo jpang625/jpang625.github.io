@@ -237,6 +237,12 @@ select {
   animation: hero-zoom 9000ms linear both;
 }
 
+.hero-slide.is-leaving {
+  opacity: 0;
+  animation: none;
+  transform: var(--hero-exit-transform, scale(1.075));
+}
+
 @keyframes hero-zoom {
   from {
     transform: scale(1.01);
@@ -1215,6 +1221,10 @@ select {
 
   .hero-slide.is-active {
     animation: none;
+  }
+
+  .hero-slide.is-leaving {
+    transform: none;
   }
 
   .button:hover,

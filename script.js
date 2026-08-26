@@ -32,7 +32,11 @@ const caption = document.querySelector('.hero-caption');
 const rotationToggle = document.querySelector('.rotation-toggle');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const slideLabels = slides.map((slide, index) => slide.dataset.label || `Background ${index + 1}`);
-const rotationDelay = 9000;
+// Rotate sooner while keeping the existing 9-second zoom pace.
+const rotationDelay = 7500;
+const slideExitCleanupDelay = 850;
+const slideExitTimers = new WeakMap();
+const slideExitHandlers = new WeakMap();
 let activeSlide = 0;
 let rotationTimer;
 let rotationPaused = reduceMotion.matches;
@@ -42,13 +46,47 @@ function prepareSlide(index) {
   slides[(index + slides.length) % slides.length].loading = 'eager';
 }
 
+function clearSlideExit(slide) {
+  window.clearTimeout(slideExitTimers.get(slide));
+  slideExitTimers.delete(slide);
+  slide.removeEventListener('transitionend', slideExitHandlers.get(slide));
+  slideExitHandlers.delete(slide);
+  slide.classList.remove('is-leaving');
+  slide.style.removeProperty('--hero-exit-transform');
+}
+
+function deactivateSlide(slide) {
+  if (!slide.classList.contains('is-active')) return;
+
+  slide.style.setProperty('--hero-exit-transform', getComputedStyle(slide).transform);
+  slide.classList.remove('is-active');
+  slide.classList.add('is-leaving');
+
+  const finishSlideExit = (event) => {
+    if (event && (event.target !== slide || event.propertyName !== 'opacity')) return;
+    if (!slide.classList.contains('is-active')) clearSlideExit(slide);
+  };
+  slide.addEventListener('transitionend', finishSlideExit);
+  slideExitHandlers.set(slide, finishSlideExit);
+
+  const exitTimer = window.setTimeout(finishSlideExit, slideExitCleanupDelay);
+  slideExitTimers.set(slide, exitTimer);
+}
+
 function showSlide(index) {
   activeSlide = (index + slides.length) % slides.length;
   prepareSlide(activeSlide);
   prepareSlide(activeSlide + 1);
 
   slides.forEach((slide, slideIndex) => {
-    slide.classList.toggle('is-active', slideIndex === activeSlide);
+    if (slideIndex === activeSlide) {
+      if (!slide.classList.contains('is-active')) {
+        clearSlideExit(slide);
+        slide.classList.add('is-active');
+      }
+    } else {
+      deactivateSlide(slide);
+    }
   });
 
   dots.forEach((dot, dotIndex) => {
