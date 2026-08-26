@@ -171,6 +171,7 @@ select {
 }
 
 .hero {
+  --hero-shade-opacity: 1;
   position: relative;
   width: min(100%, var(--hero-max));
   min-height: 620px;
@@ -257,6 +258,8 @@ select {
   background:
     linear-gradient(90deg, rgba(4, 20, 28, 0.52) 0%, rgba(4, 20, 28, 0.22) 56%, rgba(4, 20, 28, 0.34) 100%),
     linear-gradient(0deg, rgba(4, 20, 28, 0.3) 0%, transparent 48%);
+  opacity: var(--hero-shade-opacity);
+  transition: opacity 700ms ease;
 }
 
 .hero-layout {

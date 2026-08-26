@@ -28,6 +28,7 @@ window.addEventListener('resize', () => {
 
 const slides = [...document.querySelectorAll('.hero-slide')];
 const dots = [...document.querySelectorAll('.hero-dot')];
+const hero = document.querySelector('.hero');
 const caption = document.querySelector('.hero-caption');
 const rotationToggle = document.querySelector('.rotation-toggle');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -77,6 +78,7 @@ function showSlide(index) {
   activeSlide = (index + slides.length) % slides.length;
   prepareSlide(activeSlide);
   prepareSlide(activeSlide + 1);
+  hero?.style.setProperty('--hero-shade-opacity', slides[activeSlide].dataset.shadeOpacity || '1');
 
   slides.forEach((slide, slideIndex) => {
     if (slideIndex === activeSlide) {
