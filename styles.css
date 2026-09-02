@@ -1081,6 +1081,10 @@ select {
     grid-column: 1 / -1;
   }
 
+  .button-email {
+    grid-column: 1 / -1;
+  }
+
   .hero-controls {
     bottom: 25px;
     gap: 12px;
