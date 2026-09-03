@@ -455,6 +455,15 @@ select {
   line-height: 1.02;
 }
 
+.section h2.about-title {
+  font-size: clamp(2.4rem, 3.1vw, 2.75rem);
+}
+
+.about-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
 .section-kicker {
   color: var(--teal);
 }
@@ -1033,6 +1042,10 @@ select {
 @media (max-width: 680px) {
   :root {
     --shell: calc(100% - 28px);
+  }
+
+  .about-title-line {
+    white-space: normal;
   }
 
   .brand > span:last-child {
